@@ -2,8 +2,9 @@ const express = require("express");
 const fetch = require("node-fetch");
 const cors = require("cors");
 const path = require("path");
+const enforce = require("express-sslify");
 
-const { getDate, redirectToHttps } = require("./utils");
+const { getDate } = require("./utils");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +13,7 @@ app.use(cors());
 
 // redirect to https on production
 if (process.env.NODE_ENV === "production") {
-  app.use(redirectToHttps);
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
 }
 
 app.get("/", (req, res) => {
