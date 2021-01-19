@@ -1,0 +1,23 @@
+{
+  "name": "currency-rates-api",
+  "version": "1.0.0",
+  "description": "A Service to return the currency exchange rates between a base currency and target currencies",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Exchange",
+    "Rates"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

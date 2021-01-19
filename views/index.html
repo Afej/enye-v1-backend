@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange Rates</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      header {
+        padding: 2rem 1rem;
+        width: 100%;
+        background-color: rgb(80, 208, 218);
+        color: white;
+        margin: 0 0 2rem;
+      }
+
+      h1 {
+        margin: 1rem 0;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      header p {
+        text-align: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+        margin: 0 0 2rem;
+      }
+
+      main p {
+        margin: 1rem 0;
+        text-align: center;
+        max-width: 40rem;
+        width: 90%;
+      }
+
+      main h2:not(:first-of-type) {
+        margin: 1rem 0 0;
+      }
+
+      code {
+        margin: 1rem;
+        padding: 1rem;
+        background-color: rgb(80, 208, 218);
+        color: white;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Exchange Rates API</h1>
+    </header>
+    <main>
+      <h2>Example</h2>
+      <p>To use the API, use this format</p>
+      <code>
+        {base_url}/api/rates?base={base currency}&amp;currency={target
+        currencies}
+      </code>
+      <p>
+        eg.
+        <a href="/api/rates?base=USD&currency=CAD,GBP,EUR">
+          {base_url}/api/rates?base=USD&amp;currency=CAD,GBP,EUR
+        </a>
+      </p>
+
+      <p>Where "base_url" is:</p>
+      <!-- <code>https://ts-exchangeratesapi.herokuapp.com/</code> -->
+
+      <h2>Explanation</h2>
+
+      <p>
+        The example endpoint URL takes "USD" as the base currency and it expects
+        to get the exchange rates for
+      </p>
+      <ul>
+        <li>USD -> CAD</li>
+        <li>USD -> GBP</li>
+        <li>USD -> EUR</li>
+      </ul>
+    </main>
+  </body>
+</html>
